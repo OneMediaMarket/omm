@@ -1,0 +1,107 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-ui {
+  min-width: 800px;
+  margin: 0 auto;
+}
+
+.our-form {
+  display: flex;
+  justify-content: center;
+}
+
+.status {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.boxes {
+  display: flex;
+  width: 100%;
+}
+
+.progress {
+  border: 1px solid #c7c7c7;
+  border-right: none;
+  position: relative;
+}
+
+.progress-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #7ecc00;
+  opacity: 0.57;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: transform 0.4s ease-out;
+}
+
+.box {
+  height: 40px;
+  border-right: 1px solid #c7c7c7;
+  flex: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.33s ease-out;
+  transform: scale(1.2);
+}
+
+body.overlay-is-open .overlay,
+.overlay-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+body.overlay-is-open .main-ui {
+  filter: blur(4px);
+}
+
+@keyframes showError {
+  50% {
+    color: red;
+    transform: scale(1.2);
+  }
+  100% {
+    color: #333;
+    transform: scale(1);
+  }
+}
+
+.animate-wrong {
+  animation: 1.33s showError;
+}
+
+.problem {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+input {
+  height: 48px;
+  width: 120px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: #03498b;
+  color: #fff;
+}
