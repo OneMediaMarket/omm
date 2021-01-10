@@ -36,8 +36,8 @@ ul > li > a {
 } */
 .header {
   padding: 0 45px;
-  background-color: #283593;
-  color: #fff;
+  background-color: #fff;
+  color: #283593;
   display: flex;
   justify-content: space-between;
   align-items: center;
